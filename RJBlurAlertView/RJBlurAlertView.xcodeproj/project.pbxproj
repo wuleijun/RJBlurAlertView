@@ -23,6 +23,7 @@
 		AF5FB92919404E9A00710CB5 /* RJBlurAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5FB92819404E9A00710CB5 /* RJBlurAlertViewTests.m */; };
 		AF5FB93519404EE900710CB5 /* RJBlurAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5FB93319404EE900710CB5 /* RJBlurAlertView.m */; };
 		AF5FB93719404F1900710CB5 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB93619404F1900710CB5 /* GPUImage.framework */; };
+		AF5FB9391940584400710CB5 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF5FB9381940584400710CB5 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		AF5FB93319404EE900710CB5 /* RJBlurAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJBlurAlertView.m; sourceTree = "<group>"; };
 		AF5FB93419404EE900710CB5 /* RJBlurAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJBlurAlertView.h; sourceTree = "<group>"; };
 		AF5FB93619404F1900710CB5 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = ../../ToBeUsed/RJAlertView/GPUImage.framework; sourceTree = "<group>"; };
+		AF5FB9381940584400710CB5 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		AF5FB90419404E9A00710CB5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF5FB9381940584400710CB5 /* background.jpg */,
 				AF5FB90519404E9A00710CB5 /* RJBlurAlertView-Info.plist */,
 				AF5FB90619404E9A00710CB5 /* InfoPlist.strings */,
 				AF5FB90919404E9A00710CB5 /* main.m */,
@@ -163,8 +166,8 @@
 		AF5FB93219404EA300710CB5 /* RJBlurAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				AF5FB93319404EE900710CB5 /* RJBlurAlertView.m */,
 				AF5FB93419404EE900710CB5 /* RJBlurAlertView.h */,
+				AF5FB93319404EE900710CB5 /* RJBlurAlertView.m */,
 			);
 			name = RJBlurAlertView;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF5FB91619404E9A00710CB5 /* Images.xcassets in Resources */,
+				AF5FB9391940584400710CB5 /* background.jpg in Resources */,
 				AF5FB90819404E9A00710CB5 /* InfoPlist.strings in Resources */,
 				AF5FB91119404E9A00710CB5 /* Main.storyboard in Resources */,
 			);
@@ -483,6 +487,7 @@
 				AF5FB92E19404E9B00710CB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF5FB92F19404E9B00710CB5 /* Build configuration list for PBXNativeTarget "RJBlurAlertViewTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +496,7 @@
 				AF5FB93119404E9B00710CB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
