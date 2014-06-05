@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF5FB8FE19404E9A00710CB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB8FD19404E9A00710CB5 /* Foundation.framework */; };
+		AF5FB90019404E9A00710CB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB8FF19404E9A00710CB5 /* CoreGraphics.framework */; };
+		AF5FB90219404E9A00710CB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB90119404E9A00710CB5 /* UIKit.framework */; };
+		AF5FB90819404E9A00710CB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF5FB90619404E9A00710CB5 /* InfoPlist.strings */; };
+		AF5FB90A19404E9A00710CB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5FB90919404E9A00710CB5 /* main.m */; };
+		AF5FB90E19404E9A00710CB5 /* RJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5FB90D19404E9A00710CB5 /* RJAppDelegate.m */; };
+		AF5FB91119404E9A00710CB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5FB90F19404E9A00710CB5 /* Main.storyboard */; };
+		AF5FB91419404E9A00710CB5 /* RJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5FB91319404E9A00710CB5 /* RJViewController.m */; };
+		AF5FB91619404E9A00710CB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5FB91519404E9A00710CB5 /* Images.xcassets */; };
+		AF5FB91D19404E9A00710CB5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB91C19404E9A00710CB5 /* XCTest.framework */; };
+		AF5FB91E19404E9A00710CB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB8FD19404E9A00710CB5 /* Foundation.framework */; };
+		AF5FB91F19404E9A00710CB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB90119404E9A00710CB5 /* UIKit.framework */; };
+		AF5FB92719404E9A00710CB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF5FB92519404E9A00710CB5 /* InfoPlist.strings */; };
+		AF5FB92919404E9A00710CB5 /* RJBlurAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5FB92819404E9A00710CB5 /* RJBlurAlertViewTests.m */; };
+		AF5FB93519404EE900710CB5 /* RJBlurAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5FB93319404EE900710CB5 /* RJBlurAlertView.m */; };
+		AF5FB93719404F1900710CB5 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB93619404F1900710CB5 /* GPUImage.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF5FB92019404E9A00710CB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF5FB8F219404E9A00710CB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF5FB8F919404E9A00710CB5;
+			remoteInfo = RJBlurAlertView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF5FB8FA19404E9A00710CB5 /* RJBlurAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RJBlurAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5FB8FD19404E9A00710CB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF5FB8FF19404E9A00710CB5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF5FB90119404E9A00710CB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF5FB90519404E9A00710CB5 /* RJBlurAlertView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RJBlurAlertView-Info.plist"; sourceTree = "<group>"; };
+		AF5FB90719404E9A00710CB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF5FB90919404E9A00710CB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF5FB90B19404E9A00710CB5 /* RJBlurAlertView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RJBlurAlertView-Prefix.pch"; sourceTree = "<group>"; };
+		AF5FB90C19404E9A00710CB5 /* RJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJAppDelegate.h; sourceTree = "<group>"; };
+		AF5FB90D19404E9A00710CB5 /* RJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJAppDelegate.m; sourceTree = "<group>"; };
+		AF5FB91019404E9A00710CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF5FB91219404E9A00710CB5 /* RJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJViewController.h; sourceTree = "<group>"; };
+		AF5FB91319404E9A00710CB5 /* RJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJViewController.m; sourceTree = "<group>"; };
+		AF5FB91519404E9A00710CB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF5FB91B19404E9A00710CB5 /* RJBlurAlertViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RJBlurAlertViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5FB91C19404E9A00710CB5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AF5FB92419404E9A00710CB5 /* RJBlurAlertViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RJBlurAlertViewTests-Info.plist"; sourceTree = "<group>"; };
+		AF5FB92619404E9A00710CB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF5FB92819404E9A00710CB5 /* RJBlurAlertViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBlurAlertViewTests.m; sourceTree = "<group>"; };
+		AF5FB93319404EE900710CB5 /* RJBlurAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJBlurAlertView.m; sourceTree = "<group>"; };
+		AF5FB93419404EE900710CB5 /* RJBlurAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJBlurAlertView.h; sourceTree = "<group>"; };
+		AF5FB93619404F1900710CB5 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = ../../ToBeUsed/RJAlertView/GPUImage.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF5FB8F719404E9A00710CB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5FB93719404F1900710CB5 /* GPUImage.framework in Frameworks */,
+				AF5FB90019404E9A00710CB5 /* CoreGraphics.framework in Frameworks */,
+				AF5FB90219404E9A00710CB5 /* UIKit.framework in Frameworks */,
+				AF5FB8FE19404E9A00710CB5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5FB91819404E9A00710CB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5FB91D19404E9A00710CB5 /* XCTest.framework in Frameworks */,
+				AF5FB91F19404E9A00710CB5 /* UIKit.framework in Frameworks */,
+				AF5FB91E19404E9A00710CB5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF5FB8F119404E9A00710CB5 = {
+			isa = PBXGroup;
+			children = (
+				AF5FB90319404E9A00710CB5 /* RJBlurAlertView */,
+				AF5FB92219404E9A00710CB5 /* RJBlurAlertViewTests */,
+				AF5FB8FC19404E9A00710CB5 /* Frameworks */,
+				AF5FB8FB19404E9A00710CB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF5FB8FB19404E9A00710CB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FB8FA19404E9A00710CB5 /* RJBlurAlertView.app */,
+				AF5FB91B19404E9A00710CB5 /* RJBlurAlertViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF5FB8FC19404E9A00710CB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FB93619404F1900710CB5 /* GPUImage.framework */,
+				AF5FB8FD19404E9A00710CB5 /* Foundation.framework */,
+				AF5FB8FF19404E9A00710CB5 /* CoreGraphics.framework */,
+				AF5FB90119404E9A00710CB5 /* UIKit.framework */,
+				AF5FB91C19404E9A00710CB5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF5FB90319404E9A00710CB5 /* RJBlurAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FB93219404EA300710CB5 /* RJBlurAlertView */,
+				AF5FB90C19404E9A00710CB5 /* RJAppDelegate.h */,
+				AF5FB90D19404E9A00710CB5 /* RJAppDelegate.m */,
+				AF5FB90F19404E9A00710CB5 /* Main.storyboard */,
+				AF5FB91219404E9A00710CB5 /* RJViewController.h */,
+				AF5FB91319404E9A00710CB5 /* RJViewController.m */,
+				AF5FB91519404E9A00710CB5 /* Images.xcassets */,
+				AF5FB90419404E9A00710CB5 /* Supporting Files */,
+			);
+			path = RJBlurAlertView;
+			sourceTree = "<group>";
+		};
+		AF5FB90419404E9A00710CB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FB90519404E9A00710CB5 /* RJBlurAlertView-Info.plist */,
+				AF5FB90619404E9A00710CB5 /* InfoPlist.strings */,
+				AF5FB90919404E9A00710CB5 /* main.m */,
+				AF5FB90B19404E9A00710CB5 /* RJBlurAlertView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF5FB92219404E9A00710CB5 /* RJBlurAlertViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FB92819404E9A00710CB5 /* RJBlurAlertViewTests.m */,
+				AF5FB92319404E9A00710CB5 /* Supporting Files */,
+			);
+			path = RJBlurAlertViewTests;
+			sourceTree = "<group>";
+		};
+		AF5FB92319404E9A00710CB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FB92419404E9A00710CB5 /* RJBlurAlertViewTests-Info.plist */,
+				AF5FB92519404E9A00710CB5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF5FB93219404EA300710CB5 /* RJBlurAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FB93319404EE900710CB5 /* RJBlurAlertView.m */,
+				AF5FB93419404EE900710CB5 /* RJBlurAlertView.h */,
+			);
+			name = RJBlurAlertView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF5FB8F919404E9A00710CB5 /* RJBlurAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5FB92C19404E9B00710CB5 /* Build configuration list for PBXNativeTarget "RJBlurAlertView" */;
+			buildPhases = (
+				AF5FB8F619404E9A00710CB5 /* Sources */,
+				AF5FB8F719404E9A00710CB5 /* Frameworks */,
+				AF5FB8F819404E9A00710CB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RJBlurAlertView;
+			productName = RJBlurAlertView;
+			productReference = AF5FB8FA19404E9A00710CB5 /* RJBlurAlertView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF5FB91A19404E9A00710CB5 /* RJBlurAlertViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5FB92F19404E9B00710CB5 /* Build configuration list for PBXNativeTarget "RJBlurAlertViewTests" */;
+			buildPhases = (
+				AF5FB91719404E9A00710CB5 /* Sources */,
+				AF5FB91819404E9A00710CB5 /* Frameworks */,
+				AF5FB91919404E9A00710CB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF5FB92119404E9A00710CB5 /* PBXTargetDependency */,
+			);
+			name = RJBlurAlertViewTests;
+			productName = RJBlurAlertViewTests;
+			productReference = AF5FB91B19404E9A00710CB5 /* RJBlurAlertViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF5FB8F219404E9A00710CB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RJ;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "rayjune Wu";
+				TargetAttributes = {
+					AF5FB91A19404E9A00710CB5 = {
+						TestTargetID = AF5FB8F919404E9A00710CB5;
+					};
+				};
+			};
+			buildConfigurationList = AF5FB8F519404E9A00710CB5 /* Build configuration list for PBXProject "RJBlurAlertView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF5FB8F119404E9A00710CB5;
+			productRefGroup = AF5FB8FB19404E9A00710CB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF5FB8F919404E9A00710CB5 /* RJBlurAlertView */,
+				AF5FB91A19404E9A00710CB5 /* RJBlurAlertViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF5FB8F819404E9A00710CB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5FB91619404E9A00710CB5 /* Images.xcassets in Resources */,
+				AF5FB90819404E9A00710CB5 /* InfoPlist.strings in Resources */,
+				AF5FB91119404E9A00710CB5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5FB91919404E9A00710CB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5FB92719404E9A00710CB5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF5FB8F619404E9A00710CB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5FB93519404EE900710CB5 /* RJBlurAlertView.m in Sources */,
+				AF5FB90E19404E9A00710CB5 /* RJAppDelegate.m in Sources */,
+				AF5FB90A19404E9A00710CB5 /* main.m in Sources */,
+				AF5FB91419404E9A00710CB5 /* RJViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5FB91719404E9A00710CB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5FB92919404E9A00710CB5 /* RJBlurAlertViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF5FB92119404E9A00710CB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF5FB8F919404E9A00710CB5 /* RJBlurAlertView */;
+			targetProxy = AF5FB92019404E9A00710CB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF5FB90619404E9A00710CB5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5FB90719404E9A00710CB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF5FB90F19404E9A00710CB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5FB91019404E9A00710CB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF5FB92519404E9A00710CB5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5FB92619404E9A00710CB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF5FB92A19404E9B00710CB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF5FB92B19404E9B00710CB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF5FB92D19404E9B00710CB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/juns/Desktop/ToBeUsed/RJAlertView,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RJBlurAlertView/RJBlurAlertView-Prefix.pch";
+				INFOPLIST_FILE = "RJBlurAlertView/RJBlurAlertView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AF5FB92E19404E9B00710CB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/juns/Desktop/ToBeUsed/RJAlertView,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RJBlurAlertView/RJBlurAlertView-Prefix.pch";
+				INFOPLIST_FILE = "RJBlurAlertView/RJBlurAlertView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AF5FB93019404E9B00710CB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RJBlurAlertView.app/RJBlurAlertView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RJBlurAlertView/RJBlurAlertView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RJBlurAlertViewTests/RJBlurAlertViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AF5FB93119404E9B00710CB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RJBlurAlertView.app/RJBlurAlertView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RJBlurAlertView/RJBlurAlertView-Prefix.pch";
+				INFOPLIST_FILE = "RJBlurAlertViewTests/RJBlurAlertViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF5FB8F519404E9A00710CB5 /* Build configuration list for PBXProject "RJBlurAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5FB92A19404E9B00710CB5 /* Debug */,
+				AF5FB92B19404E9B00710CB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF5FB92C19404E9B00710CB5 /* Build configuration list for PBXNativeTarget "RJBlurAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5FB92D19404E9B00710CB5 /* Debug */,
+				AF5FB92E19404E9B00710CB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF5FB92F19404E9B00710CB5 /* Build configuration list for PBXNativeTarget "RJBlurAlertViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5FB93019404E9B00710CB5 /* Debug */,
+				AF5FB93119404E9B00710CB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF5FB8F219404E9A00710CB5 /* Project object */;
+}
