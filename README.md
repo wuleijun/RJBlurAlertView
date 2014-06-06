@@ -5,7 +5,7 @@ RJBlurAlertView is a custom alert view with a blurred background view.It can be 
 
 
 #How To Use
-**Ensure that you has added `GPUImage.framework` in your project.**
+**Ensure that you have added `GPUImage.framework` in your project.**
 
 RJBlurAlertView has `RJBlurAlertViewTypeText` and `RJBlurAlertViewTypeCustomView` types.You can use it following ways:
 
