@@ -21,10 +21,25 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 @property (nonatomic,strong) UIImageView *backgroundView;
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UILabel *textLabel;
-@property (nonatomic,assign) CGSize textSize;
+@property (nonatomic,assign) CGSize contentSize;
+@property (nonatomic,assign) RJBlurAlertViewContentType contentType;
+@property (nonatomic,strong) UIView *contentView;
 @end
 
 @implementation RJBlurAlertView
+
+- (id)initWithTitle:(NSString *)title contentView:(UIView *)contentView cancelButton:(BOOL)hasCancelButton color:(UIColor *)color
+{
+    self = [super initWithFrame:screenBounds];
+    if (self) {
+        self.opaque = YES;
+        self.alpha = 1;
+        _contentType = RJBlurAlertViewContentTypeCustomView;
+        _contentView = contentView;
+        [self _setupViewsWithTitle:title text:nil cancelButton:hasCancelButton color:color];
+    }
+    return self;
+}
 
 - (id)initWithTitle:(NSString *)title text:(NSString *)text cancelButton:(BOOL)hasCancelButton color:(UIColor*) color
 {
@@ -32,7 +47,7 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     if (self) {
         self.opaque = YES;
         self.alpha = 1;
-        [self calculateTextSize:text];
+        _contentType = RJBlurAlertViewContentTypeText;
         [self _setupViewsWithTitle:title text:text cancelButton:hasCancelButton color:color];
     }
     return self;
@@ -145,6 +160,9 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 #pragma mark - View Setup
 - (void)_setupViewsWithTitle:(NSString *)title text:(NSString *)aText cancelButton:(BOOL)hasCancelButton color:(UIColor *)color
 {
+    
+    [self calculateContentSize:aText];
+    
     /*setup backgroundView*/
     _blurFilter = [[GPUImageiOSBlurFilter alloc] init];
     _blurFilter.blurRadiusInPixels = 2.0;
@@ -158,10 +176,10 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     /*setup alertPopupView*/
     self.alertView = [self _alertPopupView];
 
-    /*setup title and text label*/
+    /*setup title and content view*/
     [self _labelSetupWithTitle:title andText:aText];
     [self addSubview:self.alertView];
-    
+ 
     /*setup buttons*/
     [self _buttonSetupWithCancelButton:hasCancelButton andColor:color];
 }
@@ -175,20 +193,26 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     _titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.alertView addSubview:_titleLabel];
     
-    _textLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 180, self.textSize.height)];
-    _textLabel.center = CGPointMake(self.alertView.frame.size.width/2, CGRectGetHeight(self.alertView.frame)/2);
-    _textLabel.text = text;
-    _textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:RJAlertViewDefaultTextFontSize];
-    _textLabel.textAlignment = NSTextAlignmentCenter;
-    _textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    _textLabel.numberOfLines = 0;
-    [self.alertView addSubview:_textLabel];
     
+    if (self.contentType == RJBlurAlertViewContentTypeText) {
+        _textLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 180, self.contentSize.height)];
+        _textLabel.center = CGPointMake(self.alertView.frame.size.width/2, CGRectGetHeight(self.alertView.frame)/2);
+        _textLabel.text = text;
+        _textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:RJAlertViewDefaultTextFontSize];
+        _textLabel.textAlignment = NSTextAlignmentCenter;
+        _textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        _textLabel.numberOfLines = 0;
+        [self.alertView addSubview:_textLabel];
+    }else{
+        //customView type
+        self.contentView.center = CGPointMake(self.alertView.frame.size.width/2, CGRectGetHeight(self.alertView.frame)/2);
+        [self.alertView addSubview:self.contentView];
+    }
 }
 
 - (UIView*)_alertPopupView
 {
-    UIView * alertSquare = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, RJAlertViewTitleLabelHeight+2*RJAlertViewSpaceHeight+self.textSize.height+RJAlertViewTitleLabelHeight)];
+    UIView * alertSquare = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, RJAlertViewTitleLabelHeight+2*RJAlertViewSpaceHeight+self.contentSize.height+RJAlertViewTitleLabelHeight)];
     alertSquare.backgroundColor = [UIColor colorWithRed:0.937 green:0.937 blue:0.937 alpha:1];
     alertSquare.center = CGPointMake(CGRectGetWidth(screenBounds)/2, CGRectGetHeight(screenBounds)/2);
     
@@ -246,7 +270,7 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     
 }
 
-- (void)calculateTextSize:(NSString *)text
+- (void)calculateContentSize:(NSString *)text
 {
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue" size:RJAlertViewDefaultTextFontSize];
     CGSize constrainedSize = CGSizeMake(180, CGFLOAT_MAX);
@@ -254,12 +278,16 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     if (IS_IOS7_Or_Later)
     {
         NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName,nil];
-        self.textSize =[text boundingRectWithSize:constrainedSize options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:tdic context:nil].size;
+        self.contentSize =[text boundingRectWithSize:constrainedSize options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:tdic context:nil].size;
     }else{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        self.textSize = [text sizeWithFont:font constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByCharWrapping];
+        self.contentSize = [text sizeWithFont:font constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByCharWrapping];
 #pragma clang diagnostic pop
+    }
+    
+    if (self.contentType == RJBlurAlertViewContentTypeCustomView) {
+        self.contentSize = self.contentView.bounds.size;
     }
 }
 
