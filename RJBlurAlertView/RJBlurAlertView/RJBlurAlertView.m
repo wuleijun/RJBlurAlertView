@@ -41,6 +41,10 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 #pragma mark - Show and Dismiss
 - (void)show
 {
+    if ([self.delegate respondsToSelector:@selector(alertViewWillShow:)]) {
+        [self.delegate alertViewWillShow:self];
+    }
+    
     switch (self.animationType) {
         case RJBlurAlertViewAnimationTypeBounce:
             [self triggerBounceAnimations];
@@ -56,6 +60,10 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 
 - (void)dismiss
 {
+    if ([self.delegate respondsToSelector:@selector(alertViewWillDismiss:)]) {
+        [self.delegate alertViewWillDismiss:self];
+    }
+    
     [UIView animateWithDuration:0.4
                           delay:0.0
                         options: UIViewAnimationOptionCurveEaseInOut
@@ -64,6 +72,9 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
                      }
                      completion:^(BOOL finished){
                          [self removeFromSuperview];
+                         if ([self.delegate respondsToSelector:@selector(alertViewDidDismiss:)]){
+                             [self.delegate alertViewDidDismiss:self];
+                         }
                      }];
 }
 
@@ -96,7 +107,9 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
                          [self.alertView setAlpha:1.0];
                      }
                      completion:^(BOOL finished){
-                         
+                         if ([self.delegate respondsToSelector:@selector(alertViewDidShow:)]) {
+                             [self.delegate alertViewDidShow:self];
+                         }
                      }];
 }
 
@@ -121,7 +134,11 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 
     [UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             self.backgroundView.alpha = 1.0;
-    } completion:nil];
+    } completion:^(BOOL finished){
+        if ([self.delegate respondsToSelector:@selector(alertViewDidShow:)]) {
+            [self.delegate alertViewDidShow:self];
+        }
+    }];
 
 }
 
@@ -264,6 +281,11 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 - (void)handleButtonTouched:(UIButton *)button
 {
     [self dismiss];
+    
+    if ([self.delegate respondsToSelector:@selector(alertView:didDismissWithButton:)]) {
+        [self.delegate alertView:self didDismissWithButton:button];
+    }
+    
     if (self.completionBlock) {
         self.completionBlock(self,button);
     }
