@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.summary      = "RJBlurAlertView is a custom alert view with a blurred background view.It can be showed as dropping or bounce."
   s.homepage     = "https://github.com/wuleijun/RJBlurAlertView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "rayjune" => "wuleijun8@gmail.com" }
   s.platform     = :ios, "5.0"
   s.source       = { :git => "https://github.com/wuleijun/RJBlurAlertView.git", :commit => 'e449aa1f1d8b011b0e0141d83765230b309b9e7e' }
