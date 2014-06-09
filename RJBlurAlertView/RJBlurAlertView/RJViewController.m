@@ -21,7 +21,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 - (IBAction)showAlertViewTouch:(UIButton *)sender {
-    RJBlurAlertView *alertView = [[RJBlurAlertView alloc] initWithTitle:@"title" text:@"this is text" cancelButton:YES color:[UIColor blueColor]];
+    RJBlurAlertView *alertView = [[RJBlurAlertView alloc] initWithTitle:@"title" text:@"this is text" cancelButton:YES];
     if (sender.tag == 1) {
         alertView.animationType = RJBlurAlertViewAnimationTypeDrop;
     }

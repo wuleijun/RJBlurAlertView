@@ -23,16 +23,16 @@ typedef NS_ENUM(NSInteger, RJBlurAlertViewContentType){
 };
 
 @interface RJBlurAlertView : UIView
+
 @property (nonatomic,strong) UIButton *okButton;
 @property (nonatomic,strong) UIButton *cancelButton;
-@property (nonatomic,strong) UIColor *titleLabelBackgroundColor;
 @property (nonatomic,assign) RJBlurAlertViewAnimationType animationType;
 @property (nonatomic,weak) id<RJBlurAlertViewDelegate> delegate;
 
 @property(nonatomic,copy) void(^completionBlock)(RJBlurAlertView *alertView,UIButton *button);
 
-- (id)initWithTitle:(NSString *)title text:(NSString *)text cancelButton:(BOOL)hasCancelButton color:(UIColor*) color;
-- (id)initWithTitle:(NSString *)title contentView:(UIView *)contentView cancelButton:(BOOL)hasCancelButton color:(UIColor *)color;
+- (id)initWithTitle:(NSString *)title text:(NSString *)text cancelButton:(BOOL)hasCancelButton;
+- (id)initWithTitle:(NSString *)title contentView:(UIView *)contentView cancelButton:(BOOL)hasCancelButton;
 - (void)show;
 - (void)dismiss;
 

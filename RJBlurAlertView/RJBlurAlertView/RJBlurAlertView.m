@@ -9,6 +9,10 @@ static const CGFloat RJAlertViewTitleLabelHeight = 44.0;
 static const CGFloat RJAlertViewSpaceHeight = 10;
 static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 
+/*Default Colors*/
+#define RJTitleLabelBackgroundColor [UIColor colorWithRed:0.20392156862745098 green:0.596078431372549 blue:0.8588235294117647 alpha:1.0]
+#define RJComfirmButtonColor [UIColor colorWithRed:0.20392156862745098 green:0.596078431372549 blue:0.8588235294117647 alpha:1.0]
+
 #define screenBounds [[UIScreen mainScreen] bounds]
 #define IS_IOS7_Or_Later [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
 
@@ -28,7 +32,7 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 
 @implementation RJBlurAlertView
 
-- (id)initWithTitle:(NSString *)title contentView:(UIView *)contentView cancelButton:(BOOL)hasCancelButton color:(UIColor *)color
+- (id)initWithTitle:(NSString *)title contentView:(UIView *)contentView cancelButton:(BOOL)hasCancelButton
 {
     self = [super initWithFrame:screenBounds];
     if (self) {
@@ -36,19 +40,19 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
         self.alpha = 1;
         _contentType = RJBlurAlertViewContentTypeCustomView;
         _contentView = contentView;
-        [self _setupViewsWithTitle:title text:nil cancelButton:hasCancelButton color:color];
+        [self _setupViewsWithTitle:title text:nil cancelButton:hasCancelButton];
     }
     return self;
 }
 
-- (id)initWithTitle:(NSString *)title text:(NSString *)text cancelButton:(BOOL)hasCancelButton color:(UIColor*) color
+- (id)initWithTitle:(NSString *)title text:(NSString *)text cancelButton:(BOOL)hasCancelButton
 {
     self = [super initWithFrame:screenBounds];
     if (self) {
         self.opaque = YES;
         self.alpha = 1;
         _contentType = RJBlurAlertViewContentTypeText;
-        [self _setupViewsWithTitle:title text:text cancelButton:hasCancelButton color:color];
+        [self _setupViewsWithTitle:title text:text cancelButton:hasCancelButton];
     }
     return self;
 }
@@ -158,7 +162,7 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 }
 
 #pragma mark - View Setup
-- (void)_setupViewsWithTitle:(NSString *)title text:(NSString *)aText cancelButton:(BOOL)hasCancelButton color:(UIColor *)color
+- (void)_setupViewsWithTitle:(NSString *)title text:(NSString *)aText cancelButton:(BOOL)hasCancelButton
 {
     
     [self calculateContentSize:aText];
@@ -181,7 +185,7 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     [self addSubview:self.alertView];
  
     /*setup buttons*/
-    [self _buttonSetupWithCancelButton:hasCancelButton andColor:color];
+    [self _buttonSetupWithCancelButton:hasCancelButton];
 }
 
 - (void)_labelSetupWithTitle:(NSString*) title andText:(NSString*) text
@@ -226,13 +230,13 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     CAShapeLayer *topBackgroundLayer = [CAShapeLayer layer];
     UIBezierPath *topBackgroundPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0,0, CGRectGetWidth(alertSquare.frame), RJAlertViewTitleLabelHeight) byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(4.0, 4.0)];
     topBackgroundLayer.path = topBackgroundPath.CGPath;
-    topBackgroundLayer.fillColor = self.titleLabelBackgroundColor?self.titleLabelBackgroundColor.CGColor:[UIColor blueColor].CGColor;
+    topBackgroundLayer.fillColor = RJTitleLabelBackgroundColor.CGColor;
     [alertSquare.layer addSublayer:topBackgroundLayer];
     
     return alertSquare;
 }
 
-- (void)_buttonSetupWithCancelButton:(BOOL) hasCancelButton andColor:(UIColor*) color
+- (void)_buttonSetupWithCancelButton:(BOOL) hasCancelButton
 {
     CGFloat buttonCenterY = (CGRectGetHeight(self.alertView.frame)*2-30-RJAlertViewSpaceHeight)/2;
     if (hasCancelButton) {
@@ -255,7 +259,7 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
         _okButton.center = CGPointMake(CGRectGetWidth(self.alertView.frame)/2, buttonCenterY);
     }
     
-    [_okButton setBackgroundColor:color];
+    [_okButton setBackgroundColor:RJComfirmButtonColor];
     
     //ok button end setup
     [_okButton setTitle:@"确定" forState:UIControlStateNormal];
