@@ -4,9 +4,21 @@ RJBlurAlertView
 RJBlurAlertView is a custom alert view with a blurred background view.It can be showed as dropping or bounce.
 
 
-#How To Use
+
+#How to install
+##Cocoapods:
+
+CocoaPods is the recommended way to add RJBlurAlertView to your project.
+Add a pod entry for RJBlurAlertView to your Podfile pod 'RJBlurAlertView', '~> 0.0.1'
+Install the pod(s) by running pod install.
+Include PNChart wherever you need it with #import "RJBlurAlertView.h".
+
+###Old way:
+**Copy the `RJBlurAlertView.h` and `RJBlurAlertView.m` to your project**
 **Ensure that you have added `GPUImage.framework` in your project.**
 
+
+#####How To Use
 RJBlurAlertView has `RJBlurAlertViewTypeText` and `RJBlurAlertViewTypeCustomView` types.You can use it following ways:
 
 Title and Text:
