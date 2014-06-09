@@ -13,10 +13,10 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/wuleijun/RJBlurAlertView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
   s.license      = "MIT"
-  s.author             = { "rayjune" => "wuleijun8@gmail.com" }
+  s.author       = { "rayjune" => "wuleijun8@gmail.com" }
   s.platform     = :ios, "5.0"
   s.source       = { :git => "https://github.com/wuleijun/RJBlurAlertView.git", :commit => 'e449aa1f1d8b011b0e0141d83765230b309b9e7e' }
-  s.source_files  = "RJBlurAlertView", "RJBlurAlertView/**/*.{h,m}"
+  s.source_files  = "RJBlurAlertViews/**/*.{h,m}"
   s.requires_arc = true
   s.dependency 'GPUImage', '~> 0.1.4'
 end
