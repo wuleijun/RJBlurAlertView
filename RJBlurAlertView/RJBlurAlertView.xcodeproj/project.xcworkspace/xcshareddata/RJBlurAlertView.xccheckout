@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>773F9086-FC2A-41B4-BC23-A793E0470617</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RJBlurAlertView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>33ECC71A-E4E6-4F0C-B854-6F9972C1CE91</key>
+		<string>https://github.com/wuleijun/RJBlurAlertView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RJBlurAlertView/RJBlurAlertView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2CA4166A-E92D-4E49-8507-E828BC224C12</key>
+		<string>../../../../ToBeUsed/RJAlertView</string>
+		<key>33ECC71A-E4E6-4F0C-B854-6F9972C1CE91</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wuleijun/RJBlurAlertView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>33ECC71A-E4E6-4F0C-B854-6F9972C1CE91</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2CA4166A-E92D-4E49-8507-E828BC224C12</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RJAlertView</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>33ECC71A-E4E6-4F0C-B854-6F9972C1CE91</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RJBlurAlertView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
