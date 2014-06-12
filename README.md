@@ -3,7 +3,11 @@ RJBlurAlertView
 
 RJBlurAlertView is a custom alert view with a blurred background view.It can be showed as dropping or bounce.
 
+#Screenshots
+![](https://raw.githubusercontent.com/wuleijun/RJBlurAlertView/master/screenshot_title.png)
 
+###Custom content view type:
+![](https://raw.githubusercontent.com/wuleijun/RJBlurAlertView/master/screenshot_customview.png)
 
 #How to install
 ##Cocoapods:
