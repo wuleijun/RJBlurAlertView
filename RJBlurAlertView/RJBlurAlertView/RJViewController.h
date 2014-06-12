@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RJViewController : UIViewController
+@interface RJViewController : UITableViewController
 
 @end
