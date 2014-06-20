@@ -21,8 +21,8 @@
 		AF5FB91F19404E9A00710CB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB90119404E9A00710CB5 /* UIKit.framework */; };
 		AF5FB92719404E9A00710CB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF5FB92519404E9A00710CB5 /* InfoPlist.strings */; };
 		AF5FB92919404E9A00710CB5 /* RJBlurAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5FB92819404E9A00710CB5 /* RJBlurAlertViewTests.m */; };
-		AF5FB93719404F1900710CB5 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5FB93619404F1900710CB5 /* GPUImage.framework */; };
 		AF5FB9391940584400710CB5 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF5FB9381940584400710CB5 /* background.jpg */; };
+		AF66DA28195414FE00E172E5 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF66DA27195414FE00E172E5 /* GPUImage.framework */; };
 		AF97354F19459AC1003C4195 /* RJBlurAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF97354E19459AC1003C4195 /* RJBlurAlertView.m */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +56,8 @@
 		AF5FB92419404E9A00710CB5 /* RJBlurAlertViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RJBlurAlertViewTests-Info.plist"; sourceTree = "<group>"; };
 		AF5FB92619404E9A00710CB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF5FB92819404E9A00710CB5 /* RJBlurAlertViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBlurAlertViewTests.m; sourceTree = "<group>"; };
-		AF5FB93619404F1900710CB5 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = ../../ToBeUsed/RJAlertView/GPUImage.framework; sourceTree = "<group>"; };
 		AF5FB9381940584400710CB5 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		AF66DA27195414FE00E172E5 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GPUImage.framework; sourceTree = "<group>"; };
 		AF97354D19459AC1003C4195 /* RJBlurAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJBlurAlertView.h; sourceTree = "<group>"; };
 		AF97354E19459AC1003C4195 /* RJBlurAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJBlurAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF5FB93719404F1900710CB5 /* GPUImage.framework in Frameworks */,
+				AF66DA28195414FE00E172E5 /* GPUImage.framework in Frameworks */,
 				AF5FB90019404E9A00710CB5 /* CoreGraphics.framework in Frameworks */,
 				AF5FB90219404E9A00710CB5 /* UIKit.framework in Frameworks */,
 				AF5FB8FE19404E9A00710CB5 /* Foundation.framework in Frameworks */,
@@ -109,7 +109,7 @@
 		AF5FB8FC19404E9A00710CB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AF5FB93619404F1900710CB5 /* GPUImage.framework */,
+				AF66DA27195414FE00E172E5 /* GPUImage.framework */,
 				AF5FB8FD19404E9A00710CB5 /* Foundation.framework */,
 				AF5FB8FF19404E9A00710CB5 /* CoreGraphics.framework */,
 				AF5FB90119404E9A00710CB5 /* UIKit.framework */,
@@ -402,6 +402,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/juns/Desktop/ToBeUsed/RJAlertView,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RJBlurAlertView/RJBlurAlertView-Prefix.pch";
@@ -419,6 +420,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/juns/Desktop/ToBeUsed/RJAlertView,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RJBlurAlertView/RJBlurAlertView-Prefix.pch";
