@@ -17,10 +17,11 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 #define IS_IOS7_Or_Later [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
 
 #import "RJBlurAlertView.h"
+#import "UIImage+ImageEffects.h"
 
 @interface RJBlurAlertView ()
 
-@property (nonatomic,strong) GPUImageiOSBlurFilter *blurFilter;
+//@property (nonatomic,strong) GPUImageiOSBlurFilter *blurFilter;
 @property (nonatomic,strong) UIView *alertView;
 @property (nonatomic,strong) UIImageView *backgroundView;
 @property (nonatomic,strong) UILabel *titleLabel;
@@ -74,7 +75,11 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
         default:
             break;
     }
-    [[[[UIApplication sharedApplication] delegate] window] addSubview:self];
+    UIWindow * window = [UIApplication sharedApplication].keyWindow;
+    if (!window){
+        window = [[UIApplication sharedApplication].windows objectAtIndex:0];
+    }
+    [window addSubview:self];
 }
 
 - (void)dismiss
@@ -167,12 +172,9 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     
     [self calculateContentSize:aText];
     
-    /*setup backgroundView*/
-    _blurFilter = [[GPUImageiOSBlurFilter alloc] init];
-    _blurFilter.blurRadiusInPixels = 2.0;
     _backgroundView = [[UIImageView alloc]initWithFrame:screenBounds];
     UIImage * image = [self _convertViewToImage];
-    UIImage *blurredSnapshotImage = [_blurFilter imageByFilteringImage:image];
+    UIImage *blurredSnapshotImage = [image applyBlurWithRadius:5 tintColor:[UIColor colorWithWhite:1.0 alpha:0.3] saturationDeltaFactor:1.8 maskImage:nil];
     [self.backgroundView setImage:blurredSnapshotImage];
     self.backgroundView.alpha = 0.0;
     [self addSubview:self.backgroundView];
@@ -195,6 +197,7 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     _titleLabel.text = title;
     _titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-LightItalic" size:20.0f];
     _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.adjustsFontSizeToFitWidth = YES;
     [self.alertView addSubview:_titleLabel];
     
     
@@ -225,13 +228,12 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     [alertSquare.layer setShadowOpacity:0.4];
     [alertSquare.layer setShadowRadius:20.0f];
     [alertSquare.layer setShadowOffset:CGSizeMake(0.0, 0.0)];
-
-    //add top background layer
-    CAShapeLayer *topBackgroundLayer = [CAShapeLayer layer];
-    UIBezierPath *topBackgroundPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0,0, CGRectGetWidth(alertSquare.frame), RJAlertViewTitleLabelHeight) byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(4.0, 4.0)];
-    topBackgroundLayer.path = topBackgroundPath.CGPath;
-    topBackgroundLayer.fillColor = RJTitleLabelBackgroundColor.CGColor;
-    [alertSquare.layer addSublayer:topBackgroundLayer];
+    alertSquare.clipsToBounds = YES;
+    
+    //add top background view
+    UIView *topBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(alertSquare.frame), RJAlertViewTitleLabelHeight)];
+    topBackgroundView.backgroundColor = RJTitleLabelBackgroundColor;
+    [alertSquare addSubview:topBackgroundView];
     
     return alertSquare;
 }

@@ -8,7 +8,6 @@
 
 
 #import <UIKit/UIKit.h>
-#import <GPUImage/GPUImage.h>
 @class RJBlurAlertView;
 @protocol RJBlurAlertViewDelegate;
 

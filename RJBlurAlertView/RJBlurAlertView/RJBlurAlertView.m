@@ -17,10 +17,10 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
 #define IS_IOS7_Or_Later [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
 
 #import "RJBlurAlertView.h"
+#import "UIImage+ImageEffects.h"
 
 @interface RJBlurAlertView ()
 
-@property (nonatomic,strong) GPUImageiOSBlurFilter *blurFilter;
 @property (nonatomic,strong) UIView *alertView;
 @property (nonatomic,strong) UIImageView *backgroundView;
 @property (nonatomic,strong) UILabel *titleLabel;
@@ -171,12 +171,9 @@ static const CGFloat RJAlertViewDefaultTextFontSize = 16;
     
     [self calculateContentSize:aText];
     
-    /*setup backgroundView*/
-    _blurFilter = [[GPUImageiOSBlurFilter alloc] init];
-    _blurFilter.blurRadiusInPixels = 2.0;
     _backgroundView = [[UIImageView alloc]initWithFrame:screenBounds];
     UIImage * image = [self _convertViewToImage];
-    UIImage *blurredSnapshotImage = [_blurFilter imageByFilteringImage:image];
+    UIImage *blurredSnapshotImage = [image applyBlurWithRadius:5 tintColor:[UIColor colorWithWhite:1.0 alpha:0.3] saturationDeltaFactor:1.8 maskImage:nil];
     [self.backgroundView setImage:blurredSnapshotImage];
     self.backgroundView.alpha = 0.0;
     [self addSubview:self.backgroundView];
