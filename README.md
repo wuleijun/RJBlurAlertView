@@ -14,16 +14,14 @@ RJBlurAlertView is a custom alert view with a blurred background view.It can be 
 
 CocoaPods is the recommended way to add RJBlurAlertView to your project.
 
-Add a pod entry for RJBlurAlertView to your Podfile pod `'RJBlurAlertView', '~> 0.0.1'`
+Add a pod entry for RJBlurAlertView to your Podfile pod `'RJBlurAlertView', '~> 0.0.2'`
 
 Install the pod(s) by running `pod install`.
 
-Include PNChart wherever you need it with #import "RJBlurAlertView.h".
+Include RJBlurAlertView wherever you need it with #import "RJBlurAlertView.h".
 
 ##Old way:
-1.**Copy the `RJBlurAlertView.h` and `RJBlurAlertView.m` to your project**
-
-2.**Ensure that you have added `GPUImage.framework` in your project.**
+1.**Copy the `RJBlurAlertView.h` , `RJBlurAlertView.m` and `UIImage+ImageEffects.h` ,`UIImage+ImageEffects.m` to your project**
 
 
 How To Use
