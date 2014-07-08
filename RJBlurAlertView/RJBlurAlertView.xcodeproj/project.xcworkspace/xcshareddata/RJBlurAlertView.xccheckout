@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>40E7215D-FCDF-4A3F-A0AF-6A6E7C1E8D84</string>
+	<string>C8C54F32-12C5-4206-924C-BDB459D058DC</string>
 	<key>IDESourceControlProjectName</key>
 	<string>RJBlurAlertView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -19,8 +19,6 @@
 	<dict>
 		<key>33ECC71A-E4E6-4F0C-B854-6F9972C1CE91</key>
 		<string>../../..</string>
-		<key>5898FCDA-47D4-469D-9AEC-2BB75EB11871</key>
-		<string>../../../../ToBeUsed/RJAlertView</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/wuleijun/RJBlurAlertView.git</string>
@@ -30,14 +28,6 @@
 	<string>33ECC71A-E4E6-4F0C-B854-6F9972C1CE91</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5898FCDA-47D4-469D-9AEC-2BB75EB11871</string>
-			<key>IDESourceControlWCCName</key>
-			<string>RJAlertView</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
