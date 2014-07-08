@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "RJBlurAlertView"
-  s.version      = “0.0.2”
+  s.version      = "0.0.2"
   s.summary      = "RJBlurAlertView is a custom alert view with a blurred background view.It can be showed as dropping or bounce."
   s.homepage     = "https://github.com/wuleijun/RJBlurAlertView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
